@@ -1,0 +1,390 @@
+<html>
+<head>
+<link rel= "stylesheet" type= "text/css" href="orderup.css" />
+<title>Orderup</title>
+</head>
+<body>
+<h1 id="myTitle">Order Up</h1><br>
+
+
+<section>
+<form action="results.html" method="get" onsubmit="displayresults();">
+
+
+<!--billing address-->
+<fieldset class="c1">
+
+<legend>Billing Address</legend>
+
+<label for=bfname>First Name</label>
+<input id=bfname name=bfname type=text required autofocus /><br>
+  
+<label for=blname>Last Name</label>
+<input id=blname name=blname type=text required autofocus /><br>
+
+<label for=baddr>Street Address</label>
+<input id=baddr name=baddr type=text required autofocus /><br>
+
+<label for=bcity>City</label>
+<input id=bcity name=bcity type=text required autofocus /><br>
+
+<!-- state selector-->
+<label for=state>State</label>
+<select id=bstate name=bstate>
+<option value="AL">AL</option>
+<option value="AK">AK</option>
+<option value="AZ">AZ</option>
+<option value="AR">AR</option>
+<option value="CA">CA</option>
+<option value="CO">CO</option>
+<option value="CT">CT</option>
+<option value="DE">DE</option>
+<option value="DC">DC</option>
+<option value="FL">FL</option>
+<option value="GA">GA</option>
+<option value="HI">HI</option>
+<option value="ID">ID</option>
+<option value="IL">IL</option>
+<option value="IN">IN</option>
+<option value="IA">IA</option>
+<option value="KS">KS</option>
+<option value="KY">KY</option>
+<option value="LA">LA</option>
+<option value="ME">ME</option>
+<option value="MD">MD</option>
+<option value="MA">MA</option>
+<option value="MI">MI</option>
+<option value="MN">MN</option>
+<option value="MS">MS</option>
+<option value="MO">MO</option>
+<option value="MT">MT</option>
+<option value="NE">NE</option>
+<option value="NV">NV</option>
+<option value="NH">NH</option>
+<option value="NJ">NJ</option>
+<option value="NM">NM</option>
+<option value="NY">NY</option>
+<option value="NC">NC</option>
+<option value="ND">ND</option>
+<option value="OH">OH</option>
+<option value="OK">OK</option>
+<option value="OR">OR</option>
+<option value="PA">PA</option>
+<option value="RI">RI</option>
+<option value="SC">SC</option>
+<option value="SD">SD</option>
+<option value="TN">TN</option>
+<option value="TX">TX</option>
+<option value="UT">UT</option>
+<option value="VT">VT</option>
+<option value="VA">VA</option>
+<option value="WA">WA</option>
+<option value="WV">WV</option>
+<option value="WI">WI</option>
+<option value="WY">WY</option>
+</select>
+</li>
+</ol>
+</fieldset>
+<!-- end billing address -->
+
+<!--delivery address-->
+<fieldset class="c1">
+
+        <legend>Delivery Address</legend>
+        
+        <input id=sameasbilling name=sameasbilling type=checkbox onclick="checkDeliveryAddres('sameasbilling');" />
+
+        <label for=sameasbilling>Same as billing Address</label><br>
+        <label for=dfname>First Name</label>
+        <input id=dfname name=dfname type=text required autofocus /><br>
+          
+        <label for=dlname>Last Name</label>
+        <input id=dlname name=dlname type=text required autofocus /><br>
+        
+        <label for=daddr>Street Address</label>
+        <input id=daddr name=daddr type=text required autofocus /><br>
+        
+        <label for=dcity>City</label>
+        <input id=dcity name=dcity type=text required autofocus /><br>
+        
+        <!-- state selector-->
+        <label for=state>State</label>
+        <select id=dstate name=dstate>
+
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="DC">DC</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="ME">ME</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MO">MO</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+        </select>
+        </li>
+        </ol>
+        </fieldset>
+        <!-- end delivery address -->
+
+
+<fieldset class="c1">
+
+<legend>Payment</legend>
+
+  
+
+<input id=visa name=cardtype type=radio checked="checked"/>
+
+<label for=visa>VISA</label>
+
+  
+
+<input id=amex name=cardtype type=radio />
+
+<label for=amex>Discover</label>
+
+  
+
+<input id=mastercard name=cardtype type=radio />
+
+<label for=mastercard>Mastercard</label>
+
+  
+
+<input id=AmericanExpress name=cardtype type=radio />
+
+<label for=AmericanExpress>American Express</label><br>
+
+<label for=name>Card</label>
+
+<input id=card name=card type=number required autofocus /><br>
+
+<label for=expirationdate>Expiration date</label>
+
+<select name="month" id="month" onchange="" size="1">
+
+<option value="00">MM</option>
+
+<option value="01">01</option>
+
+<option value="02">02</option>
+
+<option value="03">03</option>
+
+<option value="04">04</option>
+
+<option value="05">05</option>
+
+<option value="06">06</option>
+
+<option value="07">07</option>
+
+<option value="08">08</option>
+
+<option value="09">09</option>
+
+<option value="10">10</option>
+
+<option value="11">11</option>
+
+<option value="12">12</option>
+
+</select>
+
+  
+
+<select name="year" id="year" onchange="" size="1">
+
+<option value="00">YY</option>
+
+<option value="01">2018</option>
+
+<option value="02">2019</option>
+
+<option value="03">2020</option>
+
+<option value="04">2021</option>
+
+<option value="05">2022</option>
+
+</select>
+
+<br>
+
+<label for=cvv>CVV</label>
+
+<input id="cvv" type="number" maxlength="3" />
+
+</fieldset>
+
+
+<fieldset class="c1">
+
+
+<legend>Create Account</legend>
+
+  
+
+<label for=name>User Name</label>
+<input id=username name=username type=text required autofocus /><br>
+
+<label for=password>Password</label>
+<input id=password name=password type=password required autofocus /><br>
+
+<label for=retype_password>Retype Password</label>
+<input id=retype_password name=retype_password type=password onchange='checkpassword();' required autofocus /><br>
+
+</fieldset>
+
+
+
+<div id="myPhoto"></div> 
+
+<div>
+<input type="submit" name="purchase" value="Place Order" id="myButton" onclick="return checkpassword()">
+</div>
+
+</form>
+</section>
+</body>
+<script>
+
+//same-as-billing checkbox function
+function checkDeliveryAddres(id)
+{
+        if(document.getElementById(id).checked)
+        {
+                var bfname = document.getElementById("bfname").value;
+                var blname = document.getElementById("blname").value;
+                var baddr = document.getElementById("baddr").value;
+                var bcity = document.getElementById("bcity").value;
+                var selbox = document.getElementById("bstate");
+                var idx = selbox.selectedIndex;
+                var bstate = selbox.options[idx].value;
+
+                document.getElementById("dfname").value = bfname;
+                document.getElementById("dlname").value = blname;
+                document.getElementById("daddr").value = baddr;
+                document.getElementById("dcity").value = bcity;
+                document.getElementById("dstate").value = bstate;
+        }
+        else 
+        {
+                document.getElementById("dfname").value = '';
+                document.getElementById("dlname").value = '';
+                document.getElementById("daddr").value = '';
+                document.getElementById("dcity").value = '';
+                document.getElementById("dstate").value = '';
+        }
+
+}
+
+//function for checking passwords
+function checkpassword()
+{
+        if (document.getElementById('password').value != document.getElementById('retype_password').value) 
+        {
+        alert('ensure passwords match');
+
+        return false;
+        }
+}
+
+function displayresults()
+{
+
+var bfname = document.getElementById("bfname").value;
+var blname = document.getElementById("blname").value;
+var baddr = document.getElementById("baddr").value;
+var bcity = document.getElementById("bcity").value;
+var selbox = document.getElementById("bstate");
+var idx = selbox.selectedIndex;
+var bstate = selbox.options[idx].text;
+var dfname = document.getElementById("dfname").value;
+var dlname = document.getElementById("dlname").value;
+var daddr = document.getElementById("daddr").value;
+var dcity = document.getElementById("dcity").value;
+var selbox = document.getElementById("dstate");
+var idx2 = selbox.selectedIndex;
+var dstate = selbox.options[idx2].value;
+var cvv = document.getElementById("cvv").value;
+var card = document.getElementById("card").value;
+var selbox = document.getElementById("month");
+var idx3 = selbox.selectedIndex;
+var month = selbox.options[idx3].value;
+var selbox = document.getElementById("year");
+var idx4 = selbox.selectedIndex;
+var year = selbox.options[idx4].value;
+var paymentType = document.querySelector('input[name = cardtype]:checked').value;
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+var retype_password = document.getElementById("retype_password").value; 
+
+document.writeln("The form has successfully been submitted");
+document.writeln("You entered following data");
+document.writeln("<pre>");
+document.writeln("First Name : " + bfname);
+document.writeln("Last Name : " + blname);
+document.writeln("Address : " + baddr);
+document.writeln("city : " + bcity);
+document.writeln("state : " + bstate);
+document.writeln("delivery first name : " + dfname);
+document.writeln("delivery last name : " + dlname);
+document.writeln("delivery address : " + daddr);
+document.writeln("delivery city : " + dcity);
+document.writeln("delivery state: " + dstate);
+document.writeln("CVV : " + cvv);
+document.writeln("Card Number : " + card);
+document.writeln("Card Expiration Month : " + month);
+document.writeln("Card Expiration Year : " + year);
+document.writeln("Payment Type : " + paymentType);
+document.writeln("username : " + username);
+document.writeln("password : " + password);
+document.writeln("retype_password : " + retype_password); 
+}
+
+</script>
+</html>

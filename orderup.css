@@ -1,0 +1,39 @@
+body {
+background-color: aliceblue;
+color: black;
+padding: 40px;
+text-align: center;
+}
+
+.c1 {
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+#myTitle {
+    text-align:center;
+    color: black;
+    font: impact;
+    
+}
+
+
+#myButton{
+    text-align: center;
+    width: 50%;
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+}
+
+#myPhoto{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(pizza.jpg);
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 200px;
+    width: 50%;
+    text-align:center;
+}
